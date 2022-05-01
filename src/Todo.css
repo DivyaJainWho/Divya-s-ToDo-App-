@@ -1,0 +1,83 @@
+body{
+    margin: 0%;
+}
+
+.App {
+    background-color: rgb(66, 65, 65);
+    color: white;
+    max-height :100vh;
+    max-width: 100%;
+    overflow: auto;
+}
+
+.Header{
+    height: 8vh;
+    background-color: grey;
+    text-align: center;
+    padding-top: 2vh;
+    color:rgb(206, 233, 153);
+    font-size:xx-large;
+}
+
+.Footer{
+    height: 10vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: grey;
+    color: rgb(15, 194, 248);
+    font-size: x-large;
+}
+
+.TaskManager{
+    height:80vh;
+}
+
+form{
+    padding-left: 70vh;
+    width: 100vh;
+    padding-top: 10px;
+    display: flex;
+}
+
+.Input{
+    width: 400px;
+    height: 30px;
+    border-radius: 3px;
+    border-color: rgb(245, 245, 37);
+    padding-top: 5px;
+}
+
+.TaskList{
+    position: relative;
+    margin-top: 50px;
+    margin-left: 100px;
+    height:50vh;
+    background-color: rgb(245, 245, 120);
+    border-color: black;
+    border-style: solid;
+    width: 70vh;
+    overflow-y: auto;
+}
+
+.task{
+    color:black;
+    height: 5vh;
+    border-style: solid;
+    border-color: rgb(219, 179, 179);
+    background-color: beige;
+    align-items: center;
+    padding-left: 5px;
+}
+
+.trashIcon{
+    float: right;
+    padding-top: 5px;
+    padding-right: 5px;
+}
+
+.checkbox{
+    padding-top: 10px;
+    background-color: brown;
+}
