@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import TaskList from './TaskList';
+import Task from './Task'
 import '../Todo.css'
 
 function TaskManager() {
@@ -10,14 +10,18 @@ function TaskManager() {
   const handlesubmit =(e) =>{
     e.preventDefault();
     console.log(task)
-    AddTasks(task)
+    addTasks(task)
     setTask('')
   }
 
-  const AddTasks = (task) =>{
+  const addTasks = (task) => {
     return setTaskList([...tasklist, task]);
   }
-
+  
+  const deleteTask =(todo) =>{
+    console.log(tasklist.filter(e => e !== todo))
+    return setTaskList([...(tasklist.filter(e => e !== todo))])
+  }
   return (
     <div className='TaskManager'>
       <form>
@@ -25,7 +29,15 @@ function TaskManager() {
         <button style={{color:'black', background:'yellow'}} onClick={handlesubmit}>Add</button>
       </form>
       <div>
-        <div><TaskList tasklist={tasklist}/></div>
+      <div className='TaskList'>
+      {tasklist.map(todo =>{
+        return (
+          <div key={todo} className="Task">
+              <Task todo={todo} deleteTask={deleteTask}/>
+          </div>
+        )
+      })}
+      </div>
       </div>
     </div> 
   )
