@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faTrash ,faStar} from '@fortawesome/free-solid-svg-icons'
+import { faTrash ,faEdit} from '@fortawesome/free-solid-svg-icons'
 
 import '../Todo.css'
 
@@ -15,11 +15,16 @@ const Task= (props) =>{
     return props.deleteTask(props.todo)
   }
 
+  const handleEdit =() =>{
+    return props.editTask(props.todo)
+  }
+
   return (
     <div className='task'  style={{background : isChecked === true ? 'red': 'beige'}}>
       <div><span onClick={toggleCheck}><input type="checkbox" checked={isChecked} onChange={e => {}} className='checkbox'/></span>
-      {props.todo}<span onClick={handleDelete}><FontAwesomeIcon icon={faTrash} className="trashIcon"/></span>
-      <FontAwesomeIcon icon={faStar} className="trashIcon"/>
+      <span>{props.todo.title}</span>
+      <span onClick={handleDelete}><FontAwesomeIcon icon={faTrash} className="trashIcon"/></span>
+      <span onClick={handleEdit}><FontAwesomeIcon icon={faEdit} className="trashIcon"/></span>
       </div>
     </div>
   )

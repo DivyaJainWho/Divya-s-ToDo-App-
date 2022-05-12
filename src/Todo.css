@@ -69,6 +69,7 @@ form{
     background-color: beige;
     align-items: center;
     padding-left: 5px;
+    caret-color: transparent;
 }
 
 .trashIcon{
