@@ -32,11 +32,13 @@ body{
 
 .TaskManager{
     height:80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
 form{
-    padding-left: 70vh;
-    width: 100vh;
     padding-top: 10px;
     display: flex;
 }
@@ -50,14 +52,12 @@ form{
 }
 
 .TaskList{
-    position: relative;
     margin-top: 50px;
-    margin-left: 100px;
     height:50vh;
     background-color: rgb(245, 245, 120);
     border-color: black;
     border-style: solid;
-    width: 70vh;
+    width: 70vh;  
     overflow-y: auto;
 }
 
